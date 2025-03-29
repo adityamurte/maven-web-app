@@ -25,7 +25,7 @@ pipeline{
      success {
            notifyBuild('currentBuild.result')
       }
-      unsuccessful {
+      failure {
             notifyBuild('currentBuild.result')
       }
 }
