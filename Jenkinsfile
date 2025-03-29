@@ -1,19 +1,20 @@
-pipeline {  
-
+pipeline{
     agent any
-        
+
     tools{
-        maven "Maven-3.9.9"
+        maven 'maven'
     }
-    stages {
-        stage('Clone') {
-            steps {
-               git 'https://github.com/ashokitschool/maven-web-app.git'
+
+    stages{
+        stage("checkout"){
+            steps{
+              git credentialsId: 'a938564c-b099-4d3f-8e7c-0c3aec4b4c2c', url: 'https://github.com/adityamurte/maven-web-app.git'
             }
         }
-        stage('Build') {
-            steps {
-               sh 'mvn clean package'
+
+        stage("build"){
+            steps{
+                sh "mvn clean package"
             }
         }
     }
