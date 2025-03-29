@@ -1,3 +1,4 @@
+@Library('slacksharedlib')
 pipeline{
     agent any
 
