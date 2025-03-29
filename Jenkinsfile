@@ -23,9 +23,11 @@ pipeline{
     }
     post {
      success {
+           println "Current Build Result: ${currentBuild.result}"
            slackshared(currentBuild.result)
       }
       failure {
+           println "Current Build Result: ${currentBuild.result}"
             slackshared(currentBuild.result)
       }
 }
