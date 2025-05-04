@@ -13,7 +13,7 @@
             <id>maven-releases</id>
             <url>http://13.233.70.19:8081/repository/maven-releases/</url>
         </repository>
-	<snapShotRepository>
+	<snapshotRepository>
             <id>maven-snapshots</id>
             <url>http://13.233.70.19:8081/repository/maven-snapshots/</url>
         </snapShotRepository>
