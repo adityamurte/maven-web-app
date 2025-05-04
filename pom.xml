@@ -7,6 +7,19 @@
   <version>3.0-RELEASE</version>
   <name>01-maven-web-app</name>
   <url>http://maven.apache.org</url>
+
+  <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+			      <name>nexus-prod</name>
+            <url>http://13.233.70.19:8081/repository/maven-releases/</url>
+        </repository>
+		    <snapShotRepository>
+            <id>nexus-snapshot</id>
+			      <name>nexus-nonprod</name>
+            <url>http://13.233.70.19:8081/repository/maven-snapshots/</url>
+        </snapShotRepository>
+</distributionManagement>
  
   <dependencies>
     <dependency>
